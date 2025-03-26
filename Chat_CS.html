@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Gambar/TopApIn.png">
+    <title>Chat CS - TopApIn</title>
+    <link rel="stylesheet" href="Style/styles.css">
+    <script src="Style/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .chat-container {
+            max-width: 800px;
+            margin: 10px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, #6e48aa, #9d50bb);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+        
+        .chat-header h2 {
+            margin: 0;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+        }
+        
+        .chat-messages {
+            height: 300px;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f5f5f5;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .message.user {
+            align-items: flex-end;
+        }
+        
+        .message.cs {
+            align-items: flex-start;
+        }
+        
+        .message-content {
+            max-width: 70%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        
+        .user .message-content {
+            background-color: #9d50bb;
+            color: white;
+            border-top-right-radius: 0;
+        }
+        
+        .cs .message-content {
+            background-color: #e0e0e0;
+            color: #333;
+            border-top-left-radius: 0;
+        }
+        
+        .message-time {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 5px;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 15px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-family: 'Rajdhani', sans-serif;
+            outline: none;
+        }
+        
+        .chat-input button {
+            background: linear-gradient(135deg, #6e48aa, #9d50bb);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        
+        .chat-input button:hover {
+            background: linear-gradient(135deg, #5d3d91, #8a45a3);
+        }
+        
+        .operating-hours {
+            margin-top: 155px;
+            text-align: center;
+            padding: 10px;
+            background-color: #121212;
+            border-radius: 5px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        
+        .operating-hours h3 {
+            margin-top: 0;
+            color: #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="Index.html">
+            <img class="jarak1" width="50" height="70" src="Gambar/Logo_TopApIn.png" alt="logo">
+        </a>
+        <div class="search-container">
+            <span class="search-icon">⚲</span>
+            <input type="text" class="search-bar" placeholder="Search ...">
+        </div>
+        <div class="user-actions">
+            <button class="currency-button">ID/IDR</button>
+            <button class="chat-button">
+                <span style="margin-right: 5px;">💬</span>
+                CHAT CS
+            </button>
+        </div>
+    </div>
+    <div class="menu-container">
+        <nav class="menu">
+            <ul>
+                <li><a class="jarak" href="Index.html">Home Page</a></li>
+                <li><a href="History.html">Konfirmasi Pesanan</a></li>
+                <li><a href="Registrasi/Login.html">Login & Registrasi</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="operating-hours">
+            <h3>Jam Operasional Layanan Chat CS</h3>
+            <p>Senin - Jumat: 08.00 - 21.00 WIB</p>
+            <p>Sabtu - Minggu: 09.00 - 18.00 WIB</p>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="Gambar/Logo_TopApIn.png" alt="CS Avatar">
+                <h2>Customer Service TopApIn</h2>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message cs">
+                    <div class="message-content">
+                        Halo! Selamat datang di TopApIn. Ada yang bisa kami bantu?
+                    </div>
+                    <div class="message-time">10:00</div>
+                </div>
+                
+                <!-- Messages will be added here dynamically -->
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Ketik pesan Anda di sini...">
+                <button id="sendButton">Kirim</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 TopApIn. Semua Hak Dilindungi.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageInput = document.getElementById('messageInput');
+            const sendButton = document.getElementById('sendButton');
+            
+            function addMessage(content, isUser = false) {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const timeString = `${hours}:${minutes}`;
+                
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isUser ? 'user' : 'cs'}`;
+                
+                messageDiv.innerHTML = `
+                    <div class="message-content">${content}</div>
+                    <div class="message-time">${timeString}</div>
+                `;
+                
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            function handleUserMessage() {
+                const message = messageInput.value.trim();
+                if (message) {
+                    addMessage(message, true);
+                    messageInput.value = '';
+                    
+                    // Simulate CS response after a short delay
+                    setTimeout(() => {
+                        let response;
+                        if (message.toLowerCase().includes('harga') || message.toLowerCase().includes('promo')) {
+                            response = "Untuk informasi harga dan promo terbaru, silakan kunjungi halaman game yang Anda inginkan di website kami. Kami selalu menawarkan harga terbaik dan promo menarik!";
+                        } else if (message.toLowerCase().includes('pembayaran') || message.toLowerCase().includes('bayar')) {
+                            response = "TopApIn menyediakan berbagai metode pembayaran seperti transfer bank, e-wallet, dan QRIS. Semua transaksi dijamin aman dan cepat.";
+                        } else if (message.toLowerCase().includes('bantuan') || message.toLowerCase().includes('help')) {
+                            response = "Kami siap membantu Anda! Silakan jelaskan masalah yang Anda hadapi dengan lebih detail.";
+                        } else {
+                            response = "Terima kasih atas pesan Anda. Customer service kami akan segera merespons. Mohon tunggu sebentar ya!";
+                        }
+                        addMessage(response);
+                    }, 1000);
+                }
+            }
+            
+            sendButton.addEventListener('click', handleUserMessage);
+            
+            messageInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    handleUserMessage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

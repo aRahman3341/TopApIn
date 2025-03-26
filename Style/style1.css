@@ -1,0 +1,748 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+    body {
+        background-color: #121212;
+        color: #fff;
+    }
+
+    .header {
+        background-color: #1a1a1a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: #ccc;
+    }
+
+    .search-bar {
+        flex-grow: 1;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .search-bar input {
+        width: 100%;
+        padding: 8px 15px 8px 35px;
+        border-radius: 25px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #777;
+    }
+
+    .language-selector {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .language-selector img {
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    .nav-menu {
+        background-color: #1a1a1a;
+        padding: 10px 20px;
+        display: flex;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-menu a {
+        color: #ccc;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-menu a svg {
+        margin-right: 5px;
+    }
+
+    /* Banner styles */
+    .banner {
+        margin-top: 170px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center; /* Posisikan gambar ke tengah secara horizontal */
+        align-items: center; /* Posisikan gambar ke tengah secara vertikal */
+        width: 100%; /* Lebarkan sesuai container */
+        height: auto; /* Biarkan tinggi menyesuaikan */
+        overflow: hidden; /* Hindari gambar keluar dari batas */
+    }
+
+    .banner img {
+        max-width: 150%; /* Pastikan gambar tidak melebihi lebar container */
+        height: auto; /* Sesuaikan tinggi gambar */
+        display: block; /* Hindari ruang kosong di sekitar gambar */
+        width: 1090px;
+    }
+
+    .game-info {
+        display: flex;
+        background-color: rgba(0,0,0,0.7);
+        padding: 15px;
+        padding-left: 150px;
+    }
+
+    .game-logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .game-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .game-details {
+        margin-left: 20px;
+        flex-grow: 1;
+    }
+
+    .game-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .game-publisher {
+        font-size: 14px;
+        color: #ccc;
+        margin-bottom: 15px;
+    }
+
+    .game-features {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        font-size: 12px;
+        color: #ccc;
+    }
+
+    .feature svg {
+        margin-right: 5px;
+        color: #ffc107;
+    }
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+    }
+
+    .form-section {
+        flex: 7;
+        margin-right: 20px;
+    }
+
+    .rating-section {
+        flex: 3;
+    }
+
+    .description-box {
+        background-color: #2a2a2a;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .description-header {
+        background-color: #3a3a3a;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .description-tab {
+        width: 30px;
+        height: 100%;
+        background-color: #c316e9;
+        position: absolute;
+    }
+
+    .description-content {
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    .step {
+        background-color: #2a2a2a;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .step-header {
+        background-color: #3a3a3a;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .step-tab {
+        width: 30px;
+        height: 100%;
+        background-color: #352b3e;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .step-number {
+        background-color: #c316e9;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 10px;
+        z-index: 1;
+    }
+
+    .step-content {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 0px;
+        padding: 12px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 12px;
+        background-color: #3a3a3a;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+    }
+
+    .checkbox-group {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .checkbox-group input {
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .rating-box {
+        background-color: #2a2a2a;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .rating-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .rating-value {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .rating-info {
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    .help-box {
+        background-color: #2a2a2a;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .help-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .help-icon {
+        width: 30px;
+        height: 30px;
+        background-color: #3a3a3a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .help-title {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .text {
+        font-size: 14px;
+        color: #ccc;
+    }
+    .help-text {
+        font-size: 14px;
+        color: #ccc;
+    }
+    /* Nominal selection styles */
+    .nominal-section {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .section-title svg {
+        margin-left: 5px;
+        color: #ffc107;
+    }
+
+    .nominal-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .nominal-item {
+        background-color: #3a3a3a;
+        border-radius: 5px;
+        padding: 15px;
+        position: relative;
+    }
+
+    .nominal-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .nominal-price {
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .nominal-button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        font-size: 15px;
+    }
+
+    .nominal-button svg {
+        margin-right: 5px;
+    }
+
+    /* Quantity selector styles */
+    .quantity-selector {
+        display: flex;
+        align-items: center;
+        background-color: #3a3a3a;
+        border-radius: 4px;
+        overflow: hidden;
+        gap: 10px;
+    }
+
+    .quantity-input {
+        width: 40px;
+        flex-grow: 1;
+        padding: 12px;
+        background-color: #3a3a3a;
+        border: none;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .quantity-button {
+        padding: 5px 10px;
+        font-size: 16px;
+        width: 40px;
+        height: 40px;
+        background-color: #c316e9;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2px;
+        border-radius: 5px;
+    }
+
+    /* Payment method styles */
+    .payment-options {
+        margin-top: 20px;
+    }
+
+    .payment-item {
+        background-color: #3a3a3a;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .payment-ribbon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #c316e9;
+        color: #fff;
+        padding: 15px 25px;
+        font-size: 12px;
+        transform: rotate(45deg) translateX(20px) translateY(-10px);
+    }
+
+    .payment-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .payment-logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+        padding: 5px;
+    }
+
+    .payment-price {
+        color: #ffffff;
+        font-weight: bold;
+        margin-right: 70px;
+    }
+
+    .payment-category {
+        margin-top: 30px;
+    }
+
+    .category-header {
+        background-color: #3a3a3a;
+        padding: 15px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+    .category-content {
+        background-color: #3a3a3a;
+        border-radius: 5px;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .category-logo {
+        height: 30px;
+        margin: 5px;
+        filter: grayscale(30%);
+    }
+
+    /* Promo code styles */
+    .promo-input {
+        display: flex;
+        gap: 10px;
+    }
+
+    .promo-button {
+        background-color: #b78846;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .promo-available {
+        background-color: #3a3a3a;
+        border-radius: 5px;
+        padding: 12px 20px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .promo-available svg {
+        margin-right: 10px;
+        color: #ffc107;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+        .main-container {
+            flex-direction: column;
+        }
+        
+        .form-section {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        
+        .nominal-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .game-features {
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .nominal-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .top-bar {
+        position: fixed; /* Menjadikan header tetap di atas */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 30px 170px;
+      }
+      .search-bar {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 25px;
+        border: none;
+        font-size: 16px;
+        color: #fff;
+        width: 100%;
+        background-color: #444;
+        
+        padding: 10px 15px 10px 40px;
+      }
+      
+      .search-container {
+        flex-grow: 1;
+        margin-right: 20px;
+        position: relative;
+      }
+      
+      .search-icon {
+        position: absolute;
+        z-index: 1000;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa;
+      }
+      
+      .user-actions {
+        display: flex;
+        gap: 15px;
+      }
+      
+      .currency-button {
+        background-color: #222;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      
+      .chat-button {
+        background-color: #6a359c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      
+      .menu {
+          top: 16%;
+          z-index: 1000;
+          position: fixed;
+          background-color: #6a1b9a; /* Warna ungu (bisa disesuaikan) */
+          width: 100%; /* Agar menu hanya selebar kontennya */
+          padding: 10px 20px; /* Sesuaikan padding agar tidak terlalu besar */
+          border-radius: 5px; /* Opsional: Biar lebih estetik */
+      }
+      
+      .menu ul {
+          list-style: none; /* Hilangkan bullet point */
+          padding: 0;
+          margin: 0;
+          display: flex; /* Buat menu dalam satu baris */
+          gap: 20px; /* Jarak antar item menu */
+      }
+      
+      .menu li {
+          text-align: left;
+      }
+      
+      .menu a {
+          text-decoration: none;
+          color: white; /* Warna teks */
+          font-weight: bold;
+      }
+      
+      .menu-container {
+        padding: 10px 0;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start; /* Menu ke kiri */
+          padding: 1px; /* Agar tidak terlalu mepet */
+      }
+      .jarak {
+        margin-left: 150px;
+      }
+      
+      .jarak1 {
+        margin-right: 20px;
+      }
+      .games-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Membuat beberapa kolom */
+        grid-template-rows: repeat(2, auto); /* Hanya 2 baris */
+        gap: 15px;
+        justify-content: center;
+        max-width: 1000px;
+        margin: auto;
+      }
+      
+      
+      .game-list {
+        display: flex;
+        flex-direction: column; /* Mengatur elemen di dalamnya menjadi kolom */
+        align-items: center;
+      }
+      
+      .game-item:hover {
+        background-color: #2a2a2a;
+      }
+      
+      .game-item img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .game-item:hover img {
+        transform: scale(1.05);
+      }
+      
+      /* Nama game yang hanya muncul saat hover */
+      .game-name {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      .game-item:hover .game-name {
+        opacity: 1;
+      }
+      
+      .game-item {
+      position: relative;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 180px;
+      padding: 10px;
+      text-align: center;
+      transition: 0.3s;
+      }
+
+      footer {
+        text-align: center;
+        background-color: #1c1c1c;
+        padding: 15px;
+        margin-top: 20px;
+    }
