@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopApIn - Top Up Game Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Gambar/TopApIn.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap">
+    <script src="../Style/script.js" defer></script>
+   
+</head>
+<body>
+    <div class="login-container">
+        <h2>
+            <button class="back-btn" onclick="goBack()">←</button> MASUK
+        </h2>       
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Masukkan username">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Masukkan password">
+        <p>Belum Punya Akun? <a href="register.html">Daftar</label></a></p>
+        <button class="login-btn">MASUK</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
